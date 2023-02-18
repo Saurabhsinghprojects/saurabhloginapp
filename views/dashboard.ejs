@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <%- include('layouts/header'); -%>
+
+        
+        <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+        <link
+            href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+            rel="stylesheet">
+
+        <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <!-- <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow" style="height: 40px;">-->
+
+
+
+
+
+
+                <div style="background-image: linear-gradient( 180deg,#4e73df 1%,#f62a66 103%);
+                height: 124px;
+                padding: 30px;">
+
+                    <!-- <div style="position: absolute;
+                    right: 1vw;
+                    list-style: none;"> -->
+
+                    <div class="topbar-divider d-none d-sm-block"></div>
+
+                    <div style="display: inline-block;">
+                        <span style="font-size: 26px;color: white; display: inline-block;">Saurabh's
+                            app</span></a>
+                        
+                    </div>
+
+                    
+                    <span class="mr-2 text-gray-600 small" style="font-family: 'icomoon';grid-area: namex;font-size: 20px;float: right;
+                                display: inline-block; color: rgb(253, 223, 223) !important;">
+                                    <%=user.username %>
+
+                                </span>
+                    
+                </div>
+                </ul>
+            </div>
+
+            </nav>
+            <!-- End of Topbar -->
+            <style>
+                .options {
+                    width: 120px;
+                    height: 120px;
+                    border: 2px solid rgb(88 88 88);
+                    border-radius: 6px;
+                    box-sizing: border-box;
+                    /* display: inline-block; */
+                    background-color: rgb(139, 2, 139);
+                    margin: 2vw;
+                    padding: 4px;
+                    margin-left: 20px;
+                    float: left;
+                }
+
+                .optionfont a {
+                    text-decoration: none;
+                    font-size: 15px;
+                    /* font-weight: bolder; */
+                    font-family: 'Courier New', Courier, monospace;
+                    color: white;
+                    position: relative;
+                    top: 54px;
+                    left: 11px;
+                }
+
+                .optionfont a:hover {
+                    color: rgb(250, 143, 143);
+                }
+            </style>
+
+
+
+            <br>
+            <!-- <hr style="border-color:black; width: 97%"> -->
+            <div style="margin:auto;text-align: center;background-color: #f1eeee;
+            padding: 10px;">
+                <!-- Begin Page Content -->
+                <!-- <h2 style="color: #5a5c69 !important;">Change Role:</h2> -->
+                
+                <form action="/update/user" method="POST">
+                    
+                    <div class="form-group" style="width: 50vw;">
+                        <input type="text" class="form-control" placeholder="Name" id="name"
+                            name="name" value="<%=user.username %>">
+                    </div>
+                    <div class="form-group" style="width: 50vw;">
+                        <input type="number" class="form-control" placeholder="Mobile no" id="mobileno"
+                            name="mobileno" value="<%=user.mobileno %>">
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Update profile" id="sendMessageButton"
+                            class="btn btn-primary py-3 px-5">
+                    </div>
+
+                </form>
+                <br><hr style="border: 1px solid grey;"><br>
+                <form action="/password/change" method="POST">
+                    <div class="form-group" style="width: 50vw;">
+                        <input type="email" class="form-control" placeholder="Email" id="email" name="email">
+                    </div>
+                    <div class="form-group" style="width: 50vw;">
+                        <input type="password" class="form-control" placeholder="Old password" id="opassword"
+                            name="opassword">
+                    </div>
+                    <div class="form-group" style="width: 50vw;">
+                        <input type="password" class="form-control" placeholder="New password" id="npassword"
+                            name="npassword">
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Change Password" id="sendMessageButton"
+                            class="btn btn-primary py-3 px-5">
+                    </div>
+
+                </form>
+            </div>
+
+            
+        </div>
+
+
+    </div>
+    <!-- End of Main Content -->
+
+    <!-- Footer -->
+
+    <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+    <%- include('layouts/footer'); -%>
+        <%- include('layouts/scripts'); -%>
+            <!-- Scroll to Top Button-->
+            <a class="scroll-to-top rounded" href="#page-top">
+                <i class="fas fa-angle-up"></i>
+            </a>
+
+           
+
+            <!-- Bootstrap core JavaScript-->
+            <script src="vendor/jquery/jquery.min.js"></script>
+            <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+            <!-- Core plugin JavaScript-->
+            <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+            <!-- Custom scripts for all pages-->
+            <script src="js/sb-admin-2.min.js"></script>
+
+</body>
+
+</html>

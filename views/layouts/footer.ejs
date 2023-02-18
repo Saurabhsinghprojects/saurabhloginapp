@@ -1,0 +1,44 @@
+<footer class="ftco-footer ftco-section img" style="padding-left:20px;">
+  <div class="overlay"></div>
+  <!-- <div class="container"> -->
+    <div class="row mb-5">
+      <div class="col-md-3" style="padding-right:0px">
+        <div class="ftco-footer-widget mb-4">
+          <h2 class="ftco-heading-2">Saurabh login app</h2>
+          <p style="padding-right:12px">This project is created by Saurabh singh</p>
+          <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+            <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+            <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+            <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+          </ul>
+        </div>
+      </div>
+     
+      <div class="col-md-2" style="padding-right:0px">
+        <div class="ftco-footer-widget mb-4 ml-md-4">
+          <h2 class="ftco-heading-2">Site Links</h2>
+          <ul class="list-unstyled">
+    
+            
+            <% if(loggedIn) { %>
+              <!-- <li><a href="/posts/new" class="py-2 d-block">New Post</a></li> -->
+              <li><a href="/dashboard" class="py-2 d-block">Dashboard</a></li>
+              <li><a href="/auth/logout" class="py-2 d-block">Log out</a></li>
+              <% } %>
+                <% if(!loggedIn) { %>
+                  <li><a href="/auth/register" class="py-2 d-block">New User</a></li>
+                  <li><a href="/auth/login" class="py-2 d-block">Login</a></li>
+                  <% } %>
+          </ul>
+        </div>
+      </div>
+     
+    </div>
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p>
+        </p>
+      </div>
+    </div>
+  <!-- </div> -->
+</footer>

@@ -1,0 +1,14 @@
+<ul>
+    <!-- <li class="active"><a href="/"><span style="color: white;"><small>01</small>Login</span></a></li> -->
+    
+    <!-- <li><a href="/landingpage"><span><small>06</small>Landing Page</span></a></li> -->
+    <% if(loggedIn) { %>
+    <!-- <li><a href="/posts/new"><span><small>06</small>New Post</span></a></li> -->
+    <li><a href="/dashboard"><span><small>01</small>Dashboard</span></a></li>
+    <li><a href="/auth/logout"><span><small>02</small>Log out</span></a></li>
+    <% } %>
+    <% if(!loggedIn) { %>
+    <li><a href="/auth/register"><span><small>01</small>New User</span></a></li>
+    <li><a href="/auth/login"><span><small>02</small>Login</span></a></li>
+    <% } %>
+</ul>
